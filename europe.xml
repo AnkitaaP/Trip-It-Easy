@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="europeCss.css"?>
+<europe>
+  <title>Europe Trip</title>
+	<country>England</country>
+	<duration>3 days 2 nights</duration>
+	<spot>London Eye</spot>
+		<hotel>Holiday Inn</hotel>
+
+  <country>Italy</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Coloseum</spot>
+  <hotel>Hotel Iris</hotel>
+
+  <country>Paris</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Eiffel Tower</spot>
+  <hotel>Taj Vivanta</hotel>
+
+  <country>Amsterdam</country>
+  <duration>3 days 2 nights</duration>
+  <spot>The Tulip Garden</spot>
+  <hotel>Eclectic Hotel</hotel>
+
+  <country>Greece</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Greek Temples</spot>
+  <hotel>Viva Ria</hotel>
+
+  <country>Spain</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Espanol Casa</spot>
+  <hotel>La Nino un La Nina</hotel>
+</europe>

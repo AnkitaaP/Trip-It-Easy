@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="europeCss.css"?>
+<europe>
+  <title>India Trip</title>
+	<country>Delhi Agra</country>
+	<duration>3 days 2 nights</duration>
+	<spot>Taj Mahal</spot>
+		<hotel>Holiday Inn</hotel>
+
+  <country>Jaipur Rajasthan</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Umed Bhawan, Hawa Mahal</spot>
+  <hotel>Hotel Iris</hotel>
+
+  <country>Maharashtra</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Gateway of India</spot>
+  <hotel>Taj Vivanta</hotel>
+
+  <country>Kerala</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Guruvayur Temple</spot>
+  <hotel>Eclectic Hotel</hotel>
+
+  <country>Himachal Pradesh</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Tea Gardens</spot>
+  <hotel>Viva Ria</hotel>
+
+  <country>Gujarat</country>
+  <duration>3 days 2 nights</duration>
+  <spot>Ran of Kutch</spot>
+  <hotel>La Nino un La Nina</hotel>
+</europe>

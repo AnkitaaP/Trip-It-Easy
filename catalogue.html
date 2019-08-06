@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="home.css">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bree+Serif|Cinzel|Courgette|Domine|EB+Garamond|Kaushan+Script|Satisfy" rel="stylesheet"> 
+<link rel="icon" type="home\image\png" href="C:\Users\Administrator\Desktop\TripItEasy\Login\Login_v17\images\icons\favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+<title>Tour Catalogue</title>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+.special-fonts{
+  font-family: "Pacifico", cursive;
+  color:black;
+}
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: teal;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.arrow_up{
+  background: #fffff1;
+  color: teal;
+  padding-left: 8px;
+  
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 10px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-left: 20px;
+}
+.column1 {
+  float: left;
+  width: 33%;
+  padding: 5px;
+  
+}
+
+/* Clearfix (clear floats) */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-left: 20px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border-radius: 10px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+<body class="w3-indigo">
+  <div class="icon-bar">
+  <a href="#" class="arrow_up"><i class="fa fa-arrow-up"></i></a> 
+</div>
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="home.html" class="w3-bar-item w3-button w3-text-indigo w3-hover-indigo" style="font-family: 'Cinzel', serif;"><b><img class="logo"src="home\image\logo.png">TripItEasy</b></a>
+    <a href="catalogue.html" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-indigo"style="font-family: 'Cinzel', serif;border-radius: 15px;">Catalogue</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-black"style="font-family: 'Cinzel', serif; border-radius: 15px;"><i class="fa fa-info-circle"></i>About</a>
+  <a href="login.html" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-indigo"style="font-family: 'Cinzel', serif; border-radius: 15px;"><i class="fa fa-map-pin"></i>Sign In</a>
+ <a href="#contact" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-black"style="font-family: 'Cinzel', serif; border-radius: 15px;"><i class="fa fa-contao"></i>Contact</a>
+  <a href="home.html" class="w3-bar-item w3-button w3-right w3-hover-indogo w3-text-indigo"style="font-family: 'Cinzel', serif; border-radius: 15px;"><i class="fa fa-home"></i>Home</a>  
+</div>
+
+
+<br><br>
+
+<div class="row">
+  <div class="column">
+    <div class="flip-card" >
+  <div class="flip-card-inner ">
+    <div class="flip-card-front">
+      <img src="images\europe.jpg" alt="Avatar" style="width:300px;height:300px;border-radius: 10px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Ecstatic Europe</h1> 
+      <p>Enjoy to the fullest!!</p> 
+      <p>Close to narure and fantastic cities</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="column">
+    <div class="flip-card" >
+  <div class="flip-card-inner ">
+    <div class="flip-card-front">
+      <img src="images\usa.jpg" alt="Avatar" style="width:300px;height:300px;border-radius: 10px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Unique USA</h1> 
+      <p>A trip to the wonderland</p> 
+      <p>And the place of dreams and liberty</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="column">
+    <div class="flip-card" >
+  <div class="flip-card-inner ">
+    <div class="flip-card-front">
+      <img src="images\india-tour.jpg" alt="Avatar" style="width:300px;height:300px;border-radius: 10px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Incredible India</h1> 
+      <p>Visit the asian golden bird</p> 
+      <p>Have an experience of the most vivd cultures of the world</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="column">
+    <div class="flip-card" >
+  <div class="flip-card-inner ">
+    <div class="flip-card-front">
+      <img src="images\australia.jpg" alt="Avatar" style="width:300px;height:300px;border-radius: 10px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Amazing Australia</h1> 
+      <p>Voyage to the island continent</p> 
+      <p>Meet the kangaroos up close in personal</p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<br>
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge w3-text-indigo"><h1 style="text-align: center;font-family: 'Cinzel', serif;">View the Packages</h1></div>
+<br>
+<div class="row1">
+  <div class="column1">
+    <div class="card">
+  <img src="images\italy.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button><a href="India.xml">Add to Cart</a></button></p>
+</div>
+  </div>
+  <div class="column1">
+    <div class="card">
+  <img src="images\tour.jpg" alt="Denim Jeans" style="width:100%;">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button><a href="europe.xml">Add to Cart</a></button></p>
+</div>
+  </div>
+  <div class="column1">
+    <div class="card">
+  <img src="images\brochure.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button><a href="USA.xml">Add to Cart</a></button></p>
+</div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

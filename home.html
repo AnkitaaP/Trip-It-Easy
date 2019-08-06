@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="home.css">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bree+Serif|Cinzel|Courgette|Domine|EB+Garamond|Kaushan+Script|Satisfy" rel="stylesheet"> 
+<link rel="icon" type="home\image\png" href="C:\Users\Administrator\Desktop\TripItEasy\Login\Login_v17\images\icons\favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+<title>TripItEasy</title>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+.mySlides{display: none;
+  opacity:0.8;
+}
+.special-fonts{
+  font-family: "Pacifico", cursive;
+  color:black;
+}
+.mySlides1{display: none;}
+.slideImage{
+  max-width: 1500px;
+  max-height: 400px;
+}
+.myLink {display: none}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: teal;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.arrow_up{
+  background: #fffff1;
+  color: teal;
+  padding-left: 8px;
+  
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+</style>
+<body class="w3-indigo">
+  <div class="icon-bar">
+  <a href="#" class="arrow_up"><i class="fa fa-arrow-up"></i></a> 
+</div>
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="home.html" class="w3-bar-item w3-button w3-text-indigo w3-hover-indigo" style="font-family: 'Cinzel', serif;"><b><img class="logo"src="home\image\logo.png">TripItEasy</b></a>
+  <a href="catalogue.html" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-indigo"style="font-family: 'Cinzel', serif; border-radius: 15px;">Catalogue</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-black"style="font-family: 'Cinzel', serif; border-radius: 15px;"><i class="fa fa-info-circle"></i>About Us</a>
+  <a href="login.html" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-indigo"style="font-family: 'Cinzel', serif;border-radius: 15px;"><i class="fa fa-map-pin"></i>Sign In</a>
+ <a href="#contact" class="w3-bar-item w3-button w3-right w3-hover-indigo w3-text-black"style="font-family: 'Cinzel', serif;border-radius: 15px;"><i class="fa fa-contao"></i>Contact</a>
+  <a href="home.html" class="w3-bar-item w3-button w3-right w3-hover-indogo w3-text-indigo"style="font-family: 'Cinzel', serif;border-radius: 15px;"><i class="fa fa-home"></i>Home</a>  
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+  <div class="slideshow-container">
+  <div class="mySlides"><img class=" slideImage w3-image w3-center w3-animate-right" src="home\image\home_trip_pic1.jpg" alt="Trip" width="1500" height="800"></div>
+  <div class="mySlides"><img class=" slideImage w3-image w3-center w3-animate-right" src="home\image\home_trip_pic5.jpg" alt="Trip" width="1500" height="800"></div>
+  <div class="mySlides"><img class=" slideImage w3-image w3-center w3-animate-right" src="home\image\greece.h" alt="Trip" width="1500" height="800"></div>
+  <div class="mySlides"><img class=" slideImage w3-image w3-center w3-animate-right" src="home\image\home_trip_pic4.jpg" alt="Trip" width="1500" height="800"></div>
+  <div class="mySlides"><img class=" slideImage w3-image w3-center w3-animate-right" src="home\image\home_trip_pic6.jpg" alt="Trip" width="1500" height="800"></div>
+  </div>
+  <div class="w3-display-middle" style="width:65%">
+
+    <h1 class="special-fonts">Get ready for the time of your life!!</h1>
+    <h2 class="special-fonts">Be a Traveller not a Tourist</h2>
+
+      <h3 class="w3-text-sand"><b>Travel the world with us</b></h3>
+
+      </div>
+
+    </div>
+
+    <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Find the best hotels</h3>
+      <p>Book a hotel with us and get the best fares and promotions.</p>
+      <p>We know hotels - we know comfort.</p>
+      <p><button class="w3-button w3-dark-grey">Search Hotels</button></p>
+    </div>
+
+    <div id="Car" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Best car rental in the world!</h3>
+      <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs</p>
+      <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
+      <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
+    </div>
+  </div>
+</header>
+
+<div class="w3-content" style="max-width:1100px;">
+
+  <div class="w3-container w3-margin-top">
+    <h1 style="font-family: 'Dancing Script', cursive;">Our Best Picks</h3>
+    <h6>Have a <strong>closer</strong> look at the locations below.</h6>
+  </div>
+  <div class="w3-row-padding w3-text-white w3-large">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container w3-animate-left">
+        <img  id="myImg" src="home\image\maldives.jpg" alt="Greece" style="width:100%" >
+        <span class="w3-display-bottomleft w3-padding" >Maldives</span>
+        <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container w3-animate-right">
+            <img id="myImg" src="home\image\NYC.jpg" alt="New York" style="width:100%" >
+            <span class="w3-display-bottomleft w3-padding">New York</span>
+            <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img02">
+  <div id="caption"></div>
+</div>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container w3-animate-right">
+            <img id="myImg" src="home\image\india.jpeg" alt="Australia" style="width:100%" >
+            <span class="w3-display-bottomleft w3-padding">India</span>
+            <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img03">
+  <div id="caption"></div>
+</div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container w3-animate-right">
+            <img id="myImg" src="home\image\australia.jpg" alt="Paris" style="width:100%" >
+            <span class="w3-display-bottomleft w3-padding">Australia</span>
+            <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img04">
+  <div id="caption"></div>
+</div>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container w3-animate-right">
+            <img  id="myImg" src="home\image\paris1.jpg" alt="Paris" style="width:100%" >
+            <span class="w3-display-bottomleft w3-padding">Paris</span>
+            <div id="myModal" class="modal">
+             <span class="close">&times;</span>
+             <img class="modal-content" id="img01">
+             <div id="caption"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explore Nature -->
+  <div class="w3-container">
+    <h3><b>Explore various regions</b></h3>
+    <p>Travel with us and see nature at its finest.</p>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom  w3-hover-shadow">
+
+      <img src="home\image\bridge.jpg" alt="Norway" style="width:100%">
+
+      <div class="w3-container w3-white">
+        <h3 style="font-family: 'Dancing Script', cursive;"><b>West World Exploration</b></h3>
+        <p class="w3-opacity">Roundtrip to the West</p>
+        <p>Travel to the far west and make a memorable experience</p>
+        <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+
+      </div>
+    </div>
+    <div class="w3-half w3-margin-bottom  w3-hover-shadow">
+      <img src="home\image\nature.jpg" alt="Austria" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3 style="font-family: 'Dancing Script', cursive;"><b>Naturistic East World</b></h3>
+        <p class="w3-opacity">Eastern Tours</p>
+        <p>One way ticket to the East, go on try it</p>
+        <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="w3-container ">
+    <div class="w3-panel w3-padding-16 w3-dark-grey w3-opacity w3-card w3-hover-opacity-off">
+      <h2>Get the best offers first!</h2>
+      <p>Join our newsletter.</p>
+      <label>E-mail</label>
+      <input class="w3-input w3-border" style="border-radius: 10px" type="text" placeholder="Your Email address">
+      <button type="button" style="border-radius: 10px"class="w3-button w3-purple w3-margin-top" ><a href="home.html">Subscribe</a></button>
+    </div>
+  </div>
+  <!-- Feedback -->
+  <div class="w3-container">
+    <div class="w3-panel w3-padding-16  w3-card w3-hover-opacity-off">
+      <h2>Some of our regular customers</h2>
+      <p>Listen from them itself</p>
+      <div class="mySlides1 w3-center w3-content w3-animate-right">
+        <h2>Walter Cardoz</h2>
+        <p>"Thank you for a memorable trip...everything was just so perfect :)"</p>
+      </div>
+     
+     <div class="mySlides1 w3-center w3-content w3-animate-right">
+        <h2>Atul Jindal</h2>
+        <p>"thank you for organizing such a wonderful trip for Hong Kong Shenzhen and Macau. Everything was properly planned and didn't face any trouble during our stay in foreign. We are satisfied completely."</p>
+      </div>
+
+      <div class="mySlides1 w3-center w3-content w3-animate-right">
+        <h2>Preeti Singh Kang</h2>
+        <p>"TripItEasy's presence in the islands is really commendable and applaudable!the packages are very genuine, i would definitely give her a 5/5 rating as a makemytrip holiday expert!!! :)A BIG THANKS !!!!"</p>
+      </div>
+
+      <div class="mySlides1 w3-center w3-content w3-animate-right">
+        <h2>Suzie Lautze</h2>
+        <p>"The holiday of a life time - our gulet adventure in the Dodecanese Greek Islands was without a doubt our favourite family trip. The comfort and beauty of the gulet, the incredibly caring crew, the delicious food, the history we learned from our competent and friendly leader, along with the stunning beauty of the islands."</p>
+      </div>
+
+      <div class="mySlides1 w3-center w3-content w3-animate-right">
+        <h2>Rebecca Smith</h2>
+        <p>"Need to try Trip It Easy. Your Best companion for tours that last with you forever."</p>
+      </div>
+    </div>
+  </div>
+  <!-- Contact -->
+  <div class="w3-container w3-card" id="contact">
+    <h2>Contact</h2>
+    <p>Let us book your next trip!</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Mumbai, India<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 8451824791<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: info@tripiteasy.com<br>
+    <form action="/action_page.php" target="_blank">
+      <p><input style="border-radius: 10px"class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input style="border-radius: 10px"class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input style="border-radius: 10px"class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button style="border-radius: 10px"class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="home.html" target="_blank" class="w3-hover-text-green">amazetours.com</a></p>
+</footer>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3500);
+}
+var slideIndex1 = 0;
+showSlides1();
+
+function showSlides1() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex1++;
+  if (slideIndex1 > slides.length) {slideIndex1 = 1}    
+  
+  slides[slideIndex1-1].style.display = "block";  
+  setTimeout(showSlides1, 5000);
+}
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+
+
+</script>
+
+</body>
+</html>
